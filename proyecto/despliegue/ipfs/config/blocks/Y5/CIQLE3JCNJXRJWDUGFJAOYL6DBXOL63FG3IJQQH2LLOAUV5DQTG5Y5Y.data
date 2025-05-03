@@ -1,0 +1,248 @@
+
+­2¥2<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Alex Morgan Fitness</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: 'Inter', system-ui, sans-serif;
+      }
+
+      body {
+        min-height: 100vh;
+        background: white;
+        color: #1a1a1a;
+      }
+
+      .intro-section {
+        padding: 5rem 1.5rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        max-width: 48rem;
+        margin: 0 auto;
+      }
+
+      .icon {
+        width: 48px;
+        height: 48px;
+        margin-bottom: 1.5rem;
+        color: #2b2b2b;
+      }
+
+      h1 {
+        font-size: 3rem;
+        font-weight: 300;
+        margin-bottom: 1.5rem;
+        color: #1a1a1a;
+      }
+
+      .intro-tagline {
+        font-size: 1.5rem;
+        font-weight: 300;
+        color: #5a5a5a;
+        margin-bottom: 2rem;
+        line-height: 1.5;
+      }
+
+      .intro-description {
+        font-size: 1.125rem;
+        color: #777777;
+        line-height: 1.7;
+        max-width: 42rem;
+      }
+
+      .collaborations-section {
+        padding: 5rem 1.5rem;
+        background-color: #f9f9f9;
+      }
+
+      .section-title {
+        font-size: 2rem;
+        font-weight: 300;
+        text-align: center;
+        margin-bottom: 3rem;
+        color: #1a1a1a;
+      }
+
+      .instagram-grid {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        gap: 1.5rem;
+        max-width: 72rem;
+        margin: 0 auto;
+      }
+
+      .instagram-post {
+        background: white;
+        overflow: hidden;
+        transition: transform 0.3s;
+        box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+      }
+
+      .instagram-post:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+      }
+
+      .instagram-post iframe {
+        width: 100%;
+        aspect-ratio: 1;
+        border: none;
+      }
+
+      .contact-section {
+        padding: 5rem 1.5rem;
+        text-align: center;
+        max-width: 48rem;
+        margin: 0 auto;
+      }
+
+      .email-container {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 1rem;
+      }
+
+      .email-icon {
+        width: 20px;
+        height: 20px;
+        margin-right: 0.5rem;
+      }
+
+      .email-link {
+        color: #5a5a5a;
+        text-decoration: none;
+        font-size: 1.125rem;
+        transition: color 0.3s;
+      }
+
+      .email-link:hover {
+        color: #1a1a1a;
+      }
+
+      .contact-description {
+        color: #777777;
+        margin-top: 1.5rem;
+        line-height: 1.7;
+      }
+
+      footer {
+        padding: 2rem 1.5rem;
+        text-align: center;
+        border-top: 1px solid #f1f1f1;
+        color: #a8a8a8;
+        font-size: 0.875rem;
+      }
+
+      @media (min-width: 768px) {
+        .instagram-grid {
+          grid-template-columns: repeat(2, 1fr);
+        }
+        h1 {
+          font-size: 3.5rem;
+        }
+        .intro-tagline {
+          font-size: 1.75rem;
+        }
+      }
+
+      @media (min-width: 1024px) {
+        .instagram-grid {
+          grid-template-columns: repeat(3, 1fr);
+        }
+      }
+
+      .loading {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 300px;
+      }
+
+      .loading-pulse {
+        width: 6rem;
+        height: 1.5rem;
+        background-color: #e4e4e4;
+        border-radius: 0.25rem;
+        animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+      }
+
+      @keyframes pulse {
+        0%, 100% {
+          opacity: 1;
+        }
+        50% {
+          opacity: .5;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <section class="intro-section">
+        <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+          <path d="M6.5 6.5h11a5 5 0 0 1 0 10h-11a5 5 0 0 1 0-10Z"></path>
+          <path d="M9 10h6"></path>
+          <path d="M9 14h6"></path>
+        </svg>
+        <h1>Alex Morgan</h1>
+        <p class="intro-tagline">
+          Transforming lives through fitness, nutrition, and mindful movement.
+        </p>
+        <p class="intro-description">
+          With over 10 years of experience as a certified fitness trainer and nutritionist, 
+          I help people achieve their fitness goals through sustainable, balanced approaches. 
+          My philosophy embraces strength, flexibility, and mental wellness as equal components 
+          of a healthy lifestyle.
+        </p>
+      </section>
+
+      <section class="collaborations-section">
+        <h2 class="section-title">Collaborations</h2>
+        <div id="instagram-container" class="instagram-grid">
+          <div class="loading">
+            <div class="loading-pulse"></div>
+          </div>
+        </div>
+      </section>
+
+      <section class="contact-section">
+        <h2 class="section-title">Contact</h2>
+        <div class="email-container">
+          <svg class="email-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+            <path d="m22 6-10 7L2 6"></path>
+          </svg>
+          <a href="mailto:alex@fitnesswithmorgan.com" class="email-link">
+            alex@fitnesswithmorgan.com
+          </a>
+        </div>
+        <p class="contact-description">
+          For business inquiries, collaborations, or personal training consultation, 
+          feel free to reach out via email. I respond to all messages within 48 hours.
+        </p>
+      </section>
+    </main>
+
+    
+
+    
+  </body>
+</html>
+    <footer>
+        <p>Creado por TuMarca - Todos los derechos reservados.</p>
+    </footer>
+    ¥2

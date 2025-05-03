@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Subir tu sitio</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 40px;
+      background-color: #f9f9f9;
+    }
+    form {
+      background: white;
+      padding: 20px;
+      border-radius: 10px;
+      max-width: 500px;
+      margin: auto;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+    input[type="file"], input[type="email"], button {
+      width: 100%;
+      padding: 12px;
+      margin-top: 10px;
+    }
+    button {
+      background-color: #4CAF50;
+      color: white;
+      border: none;
+      cursor: pointer;
+    }
+    button:hover {
+      background-color: #45a049;
+    }
+  </style>
+</head>
+<body>
+
+<h2 style="text-align:center;">Subí tu sitio web gratis</h2>
+
+<form id="uploadForm" enctype="multipart/form-data">
+  <label for="email">Tu Email:</label><br>
+  <input type="email" id="email" name="email" required><br><br>
+
+  <label for="htmlFile">Archivo HTML:</label><br>
+  <input type="file" id="htmlFile" name="file_html" accept=".html" required><br><br>
+
+  <label for="cssFile">Archivo CSS:</label><br>
+  <input type="file" id="cssFile" name="file_css" accept=".css" required><br><br>
+
+  <button type="submit">Subir</button>
+</form>
+
+<script>
+  const form = document.getElementById('uploadForm');
+
+  form.addEventListener('submit', async (e) => {
+    e.preventDefault();
+
+    const formData = new FormData(form);
+
+    const response = await fetch('/app1/upload', {
+      method: 'POST',
+      body: formData
+    });
+
+    const result = await response.json();
+
+    if (response.ok) {
+      alert("✅ Subida exitosa: " + result.filename);
+    } else {
+      alert("❌ Error: " + result.detail);
+    }
+  });
+</script>
+
+</body>
+</html>
